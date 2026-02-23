@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fraud Detection Analysis</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        .p-detail { max-width: 900px; margin: auto; padding: 50px 20px; }
+        .data-table { width: 100%; border-collapse: collapse; margin-top: 20px; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .data-table th { background: #2c3e50; color: white; padding: 12px; text-align: left; }
+        .data-table td { padding: 12px; border-bottom: 1px solid #eee; font-size: 0.9rem; }
+        .bar-bg { background: #f0f0f0; border-radius: 10px; height: 20px; margin: 10px 0; overflow: hidden; }
+        .bar-fill { height: 100%; color: white; font-size: 0.7rem; padding-left: 10px; display: flex; align-items: center; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="p-detail">
+        <a href="../index.html#project" style="text-decoration: none; color: #3498db; font-weight: bold;"><i class="fas fa-arrow-left"></i> Kembali</a>
+        <header style="text-align: center; margin: 30px 0;">
+            <h1>Fraud Detection & Clustering</h1>
+            <p>Eksplorasi Pola Transaksi 2.512 Nasabah</p>
+        </header>
+
+        <img src="../images/cluster.png" alt="Cluster Analysis" style="width: 100%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+
+        <section style="margin-top: 30px;">
+            <h3>Tentang Analisis</h3>
+            <p>Analisis ini bertujuan mengidentifikasi anomali finansial menggunakan metode <strong>K-Means Clustering</strong>. Dataset mencakup fitur numerik seperti jumlah transaksi, durasi, dan saldo akun.</p>
+            <br>
+            <h3>Hasil Clustering (Mean)</h3>
+            <div class="bar-bg"><div class="bar-fill" style="width: 95%; background: #3498db;">Target 0: $254.56</div></div>
+            <div class="bar-bg"><div class="bar-fill" style="width: 100%; background: #9b59b6;">Target 1: $258.21</div></div>
+            <div class="bar-bg"><div class="bar-fill" style="width: 98%; background: #2ecc71;">Target 2: $257.29</div></div>
+            
+            <table class="data-table">
+                <thead><tr><th>Fitur</th><th>Target 0</th><th>Target 1</th><th>Target 2</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>Age</strong></td><td>44.84</td><td>43.85</td><td>45.41</td></tr>
+                    <tr><td><strong>Balance</strong></td><td>$5,001</td><td>$5,109</td><td>$5,170</td></tr>
+                    <tr><td><strong>Login</strong></td><td>1.0</td><td>1.0</td><td>1.0</td></tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+</body>
+</html>
